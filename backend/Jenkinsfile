@@ -14,7 +14,8 @@ pipeline {
 		
 		stage('Docker build') {
 			steps {
-		 		sh 'docker build -t 163091829738.dkr.ecr.eu-west-1.amazonaws.com/testje:latest ./backend'
+		 		sh 'docker build -t 163091829738.dkr.ecr.eu-west-1.amazonaws.com/testje:latest ./backend &&
+				docker push'
 			}
 		}
 	}
